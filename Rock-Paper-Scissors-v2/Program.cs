@@ -25,7 +25,7 @@ public class RockPaperScissrs
         if (input == 2) DisplayScores();
         if (input == 3) DisplayStats();
     }
-    public void RunGame()
+    private void RunGame()
     {
         Console.Clear();
         player1.Attack = Attack(UserInput("Player 1. Choose your fate: rock, paper, or scissors: "), player1);
@@ -119,7 +119,7 @@ public class RockPaperScissrs
         return attackValue;
     }
 
-    public bool HasWon(RPS player1, RPS player2)
+    private bool HasWon(RPS player1, RPS player2)
     {
         if ((RPS.Rock == player1) && (RPS.Scissors == player2)) return true;
         if ((RPS.Paper == player1) && (RPS.Rock == player2)) return true;
